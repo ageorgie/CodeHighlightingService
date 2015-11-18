@@ -13,7 +13,9 @@ app.get('/', function(req, res){
 app.post("/hakunamatata", function(req, res){
 	console.log("In hakunamatata");
 	console.log(req.body);
-	res.send(req.body);
+	var code = req.body["code"];
+	formattedCode = "<code>"+code+"</code>";
+	res.send(highlight.highlightBlock(formattedCode));
 })
 
 var server = app.listen(8888, function(){
