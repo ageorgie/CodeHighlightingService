@@ -15,7 +15,7 @@ app.post("/hakunamatata", function(req, res){
 	console.log(req.body);
 	var code = req.body["code"];
 	formattedCode = "<pre><code>"+code+"</code></pre>";
-	res.send(highlight.highlightAuto(formattedCode));
+	console.log(highlight.highlightAuto(formattedCode));
 })
 
 var server = app.listen(8888, function(){
