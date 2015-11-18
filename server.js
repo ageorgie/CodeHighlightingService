@@ -1,6 +1,9 @@
 var express = require("express");
+var bodyParser = require("body-parser")
+
 var app = express()
-app.use(express.bodyParser());
+app.use(bodyParser.json());
+
 var highlight = require("highlight.js")
 
 app.get('/', function(req, res){
