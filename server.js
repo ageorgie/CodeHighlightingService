@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express()
+app.use(express.bodyParser());
 var highlight = require("highlight.js")
 
 app.get('/', function(req, res){
