@@ -8,7 +8,7 @@ app.get('/', function(req, res){
 
 app.get("/hakunamatata", function(req, res){
 	console.log("In hakunamatata");
-	console.log(req);
+	console.log(req.body);
 })
 
 var server = app.listen(8888, function(){
