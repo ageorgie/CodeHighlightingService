@@ -14,7 +14,7 @@ app.post("/hakunamatata", function(req, res){
 	console.log("In hakunamatata");
 	console.log(req.body);
 	var code = req.body["code"];
-	formattedCode = "<code>"+code+"</code>";
+	formattedCode = "<pre><code>"+code+"</code></pre>";
 	res.send(highlight.highlightAuto(formattedCode));
 })
 
