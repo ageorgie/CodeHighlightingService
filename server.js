@@ -6,7 +6,7 @@ app.get('/', function(req, res){
 	res.send("Hello World");
 });
 
-app.get("/hakunamatata", function(req, res){
+app.post("/hakunamatata", function(req, res){
 	console.log("In hakunamatata");
 	console.log(req.body);
 })
